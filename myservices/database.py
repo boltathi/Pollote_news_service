@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from bson.json_util import dumps
 from bson.json_util import loads
-from Flask.config import Configuration
+from myservices.config import Configuration
 
 class PyMongoDB:
     def __init__(cls):

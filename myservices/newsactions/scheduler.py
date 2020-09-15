@@ -1,9 +1,7 @@
-import time
-import atexit
-from Flask.database import PyMongoDB
+from myservices.database import PyMongoDB
 import json
 import time
-from Flask.newsactions.fetchnewsApiService import FetchNewsApi
+from myservices.newsactions.fetchnewsApiService import FetchNewsApi
 from apscheduler.schedulers.background import BackgroundScheduler
 
 
@@ -23,6 +21,7 @@ def updateNewsWithJob():
         for categories in js['categoriesList']:
             subcategories = categories['subcategory']
             category = categories['category']
+
             for subcategory in subcategories:
 
                 news = json.loads(FetchNewsApi.getNews(subcategory))['news']

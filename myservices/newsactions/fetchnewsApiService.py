@@ -1,4 +1,4 @@
-from Flask.config import Configuration
+from myservices.config import Configuration
 import requests
 import json
 

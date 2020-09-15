@@ -1,7 +1,7 @@
 import flask
 from flask import Blueprint, jsonify
 
-from Flask.database import PyMongoDB
+from myservices.database import PyMongoDB
 
 categories_api = Blueprint('categories', __name__)
 

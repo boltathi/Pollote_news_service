@@ -2,11 +2,9 @@ import json
 
 
 import flask
-from flask import Blueprint, jsonify, request
-from Flask.newsactions.fetchnewsApiService import FetchNewsApi
-from Flask.models.news import news
-from Flask.database import PyMongoDB
-import shed
+from flask import Blueprint, jsonify
+from myservices.newsactions.fetchnewsApiService import FetchNewsApi
+from myservices.database import PyMongoDB
 
 news_api = Blueprint('news', __name__)
 
